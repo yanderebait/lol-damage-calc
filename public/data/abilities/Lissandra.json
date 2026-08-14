@@ -1,0 +1,258 @@
+{
+  "what": "Lissandra ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Lissandra",
+      "slot": "P",
+      "abilityName": "Iceborn Subjugation",
+      "instanceType": "on-hit",
+      "damageType": "magic",
+      "maxRank": 1,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "byLevelExplicit",
+            "values": [
+              120,
+              140,
+              160,
+              180,
+              200,
+              220,
+              240,
+              260,
+              280,
+              300,
+              320,
+              340,
+              370,
+              400,
+              430,
+              460,
+              490,
+              520
+            ],
+            "atLevels": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Lissandra/Iceborn Subjugation",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lissandra/Iceborn%20Subjugation",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4038403,
+      "icon": "Lissandra_Passive.png"
+    },
+    {
+      "champion": "Lissandra",
+      "slot": "Q",
+      "abilityName": "Ice Shard",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 80,
+            "to": 220
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Lissandra/Ice Shard",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lissandra/Ice%20Shard",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007664,
+      "icon": "LissandraQ.png"
+    },
+    {
+      "champion": "Lissandra",
+      "slot": "W",
+      "abilityName": "Ring of Frost",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 70,
+            "to": 210
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Lissandra/Ring of Frost",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lissandra/Ring%20of%20Frost",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3936419,
+      "icon": "LissandraW.png"
+    },
+    {
+      "champion": "Lissandra",
+      "slot": "E",
+      "abilityName": "Glacial Path",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 70,
+            "to": 210
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Lissandra/Glacial Path",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lissandra/Glacial%20Path",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4050877,
+      "icon": "LissandraE.png"
+    },
+    {
+      "champion": "Lissandra",
+      "slot": "R",
+      "abilityName": "Frozen Tomb",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 150,
+            "to": 350
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Lissandra/Frozen Tomb",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lissandra/Frozen%20Tomb",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4017996,
+      "icon": "LissandraR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Lissandra.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

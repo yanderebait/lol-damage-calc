@@ -1,0 +1,197 @@
+{
+  "what": "Ekko ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Ekko",
+      "slot": "P",
+      "abilityName": "Z-Drive Resonance",
+      "instanceType": "on-hit",
+      "damageType": "magic",
+      "maxRank": 1,
+      "components": [],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Ekko/Z-Drive Resonance",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Ekko/Z-Drive%20Resonance",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4022978,
+      "icon": "Ekko_P.png"
+    },
+    {
+      "champion": "Ekko",
+      "slot": "Q",
+      "abilityName": "Timewinder",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "initial-magic-damage",
+          "label": "Initial Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 80,
+            "to": 140
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "return-magic-damage",
+          "label": "Return Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 40,
+            "to": 140
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Ekko/Timewinder",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Ekko/Timewinder",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007479,
+      "icon": "EkkoQ.png"
+    },
+    {
+      "champion": "Ekko",
+      "slot": "W",
+      "abilityName": "Parallel Convergence",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Ekko/Parallel Convergence",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Ekko/Parallel%20Convergence",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3956502,
+      "icon": "EkkoW.png"
+    },
+    {
+      "champion": "Ekko",
+      "slot": "E",
+      "abilityName": "Phase Dive",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "bonus-magic-damage",
+          "label": "Bonus Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 50,
+            "to": 150
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Ekko/Phase Dive",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Ekko/Phase%20Dive",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4025604,
+      "icon": "EkkoE.png"
+    },
+    {
+      "champion": "Ekko",
+      "slot": "R",
+      "abilityName": "Chronobreak",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 200,
+            "to": 500
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 175,
+              "to": 175
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Ekko/Chronobreak",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Ekko/Chronobreak",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4012189,
+      "icon": "EkkoR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Ekko.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

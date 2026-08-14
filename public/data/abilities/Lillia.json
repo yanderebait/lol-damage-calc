@@ -1,0 +1,219 @@
+{
+  "what": "Lillia ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Lillia",
+      "slot": "P",
+      "abilityName": "Dream-Laden Bough",
+      "instanceType": "on-hit",
+      "damageType": "magic",
+      "maxRank": 1,
+      "components": [],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Lillia/Dream-Laden Bough",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lillia/Dream-Laden%20Bough",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4038402,
+      "icon": "Lillia_Icon_Passive.png"
+    },
+    {
+      "champion": "Lillia",
+      "slot": "Q",
+      "abilityName": "Blooming Blows",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 35,
+            "to": 75
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Lillia/Blooming Blows",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lillia/Blooming%20Blows",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007646,
+      "icon": "LilliaQ.png"
+    },
+    {
+      "champion": "Lillia",
+      "slot": "W",
+      "abilityName": "Watch Out! Eep!",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 80,
+            "to": 160
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "increased-damage",
+          "label": "Increased Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 240,
+            "to": 480
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 105,
+              "to": 105
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Lillia/Watch Out! Eep!",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lillia/Watch%20Out!%20Eep!",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007660,
+      "icon": "LilliaW.png"
+    },
+    {
+      "champion": "Lillia",
+      "slot": "E",
+      "abilityName": "Swirlseed",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 60,
+            "to": 160
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Lillia/Swirlseed",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lillia/Swirlseed",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007662,
+      "icon": "LilliaE.png"
+    },
+    {
+      "champion": "Lillia",
+      "slot": "R",
+      "abilityName": "Lilting Lullaby",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 100,
+            "to": 200
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Lillia/Lilting Lullaby",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Lillia/Lilting%20Lullaby",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3996458,
+      "icon": "LilliaR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Lillia.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

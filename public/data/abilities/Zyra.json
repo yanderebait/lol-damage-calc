@@ -1,0 +1,175 @@
+{
+  "what": "Zyra ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Zyra",
+      "slot": "P",
+      "abilityName": "Garden of Thorns",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 1,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Zyra/Garden of Thorns",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Zyra/Garden%20of%20Thorns",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3986877,
+      "icon": "ZyraP.png"
+    },
+    {
+      "champion": "Zyra",
+      "slot": "Q",
+      "abilityName": "Deadly Spines",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 60,
+            "to": 220
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 65,
+              "to": 65
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Zyra/Deadly Spines",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Zyra/Deadly%20Spines",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4013461,
+      "icon": "ZyraQ.png"
+    },
+    {
+      "champion": "Zyra",
+      "slot": "W",
+      "abilityName": "Rampant Growth",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Zyra/Rampant Growth",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Zyra/Rampant%20Growth",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4044057,
+      "icon": "ZyraW.png"
+    },
+    {
+      "champion": "Zyra",
+      "slot": "E",
+      "abilityName": "Grasping Roots",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 60,
+            "to": 200
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Zyra/Grasping Roots",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Zyra/Grasping%20Roots",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4013460,
+      "icon": "ZyraE.png"
+    },
+    {
+      "champion": "Zyra",
+      "slot": "R",
+      "abilityName": "Stranglethorns",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 200,
+            "to": 400
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Zyra/Stranglethorns",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Zyra/Stranglethorns",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3945317,
+      "icon": "ZyraR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Zyra.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

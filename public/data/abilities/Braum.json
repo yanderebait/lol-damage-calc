@@ -1,0 +1,173 @@
+{
+  "what": "Braum ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Braum",
+      "slot": "P",
+      "abilityName": "Concussive Blows",
+      "instanceType": "on-hit",
+      "damageType": "magic",
+      "maxRank": 1,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "byLevel",
+            "from": 26,
+            "to": 196,
+            "atLevels": [
+              1,
+              18
+            ],
+            "steps": 18
+          },
+          "ratios": [],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Braum/Concussive Blows",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Braum/Concussive%20Blows",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4038222,
+      "icon": "Braum_Passive.png"
+    },
+    {
+      "champion": "Braum",
+      "slot": "Q",
+      "abilityName": "Winter's Bite",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 75,
+            "to": 255
+          },
+          "ratios": [
+            {
+              "stat": "maxHP",
+              "owner": "caster",
+              "scaling": "linear",
+              "from": 2.5,
+              "to": 2.5
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Braum/Winter's Bite",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Braum/Winter's%20Bite",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007579,
+      "icon": "BraumQ.png"
+    },
+    {
+      "champion": "Braum",
+      "slot": "W",
+      "abilityName": "Stand Behind Me",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 5,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Braum/Stand Behind Me",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Braum/Stand%20Behind%20Me",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3906582,
+      "icon": "BraumW.png"
+    },
+    {
+      "champion": "Braum",
+      "slot": "E",
+      "abilityName": "Unbreakable",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 5,
+      "components": [],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Braum/Unbreakable",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Braum/Unbreakable",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4012056,
+      "icon": "BraumE.png"
+    },
+    {
+      "champion": "Braum",
+      "slot": "R",
+      "abilityName": "Glacial Fissure",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 150,
+            "to": 350
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Braum/Glacial Fissure",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Braum/Glacial%20Fissure",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007580,
+      "icon": "BraumRWrapper.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Braum.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

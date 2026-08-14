@@ -1,0 +1,212 @@
+{
+  "what": "Teemo ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Teemo",
+      "slot": "P",
+      "abilityName": "Guerrilla Warfare",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 1,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Teemo/Guerrilla Warfare",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Teemo/Guerrilla%20Warfare",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4010103,
+      "icon": "TeemoPassive.png"
+    },
+    {
+      "champion": "Teemo",
+      "slot": "Q",
+      "abilityName": "Blinding Dart",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 80,
+            "to": 260
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Teemo/Blinding Dart",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Teemo/Blinding%20Dart",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3948425,
+      "icon": "TeemoQ.png"
+    },
+    {
+      "champion": "Teemo",
+      "slot": "W",
+      "abilityName": "Move Quick",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 5,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Teemo/Move Quick",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Teemo/Move%20Quick",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4010102,
+      "icon": "TeemoW.png"
+    },
+    {
+      "champion": "Teemo",
+      "slot": "E",
+      "abilityName": "Toxic Shot",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage-on-hit",
+          "label": "Magic Damage On-Hit",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 9,
+            "to": 65
+          },
+          "ratios": [
+            {
+              "stat": "bonusAD",
+              "scaling": "linear",
+              "from": 5,
+              "to": 5
+            },
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "magic-damage-per-tick",
+          "label": "Magic Damage per Tick",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 6,
+            "to": 30
+          },
+          "ratios": [
+            {
+              "stat": "bonusAD",
+              "scaling": "linear",
+              "from": 2.5,
+              "to": 2.5
+            },
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          },
+          "hits": 4
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Teemo/Toxic Shot",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Teemo/Toxic%20Shot",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4022986,
+      "icon": "TeemoE.png"
+    },
+    {
+      "champion": "Teemo",
+      "slot": "R",
+      "abilityName": "Noxious Trap",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage-per-tick",
+          "label": "Magic Damage per Tick",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 50,
+            "to": 112.5
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "explicit",
+              "perRank": [
+                12.5,
+                12.5,
+                12.5
+              ]
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          },
+          "hits": 4
+        }
+      ],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Teemo/Noxious Trap",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Teemo/Noxious%20Trap",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4015245,
+      "icon": "TeemoR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Teemo.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

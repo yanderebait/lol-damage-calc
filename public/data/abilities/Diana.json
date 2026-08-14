@@ -1,0 +1,220 @@
+{
+  "what": "Diana ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Diana",
+      "slot": "P",
+      "abilityName": "Moonsilver Blade",
+      "instanceType": "on-hit",
+      "damageType": "magic",
+      "maxRank": 1,
+      "components": [],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Diana/Moonsilver Blade",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Diana/Moonsilver%20Blade",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4047026,
+      "icon": "Diana_Passive_LunarBlade.png"
+    },
+    {
+      "champion": "Diana",
+      "slot": "Q",
+      "abilityName": "Crescent Strike",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 70,
+            "to": 210
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Diana/Crescent Strike",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Diana/Crescent%20Strike",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007592,
+      "icon": "DianaQ.png"
+    },
+    {
+      "champion": "Diana",
+      "slot": "W",
+      "abilityName": "Pale Cascade",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage-per-orb",
+          "label": "Magic Damage per Orb",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 20,
+            "to": 68
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          },
+          "hits": 3
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Diana/Pale Cascade",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Diana/Pale%20Cascade",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4022977,
+      "icon": "DianaOrbs.png"
+    },
+    {
+      "champion": "Diana",
+      "slot": "E",
+      "abilityName": "Lunar Rush",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 50,
+            "to": 130
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Diana/Lunar Rush",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Diana/Lunar%20Rush",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3937024,
+      "icon": "DianaTeleport.png"
+    },
+    {
+      "champion": "Diana",
+      "slot": "R",
+      "abilityName": "Moonfall",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 200,
+            "to": 400
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "bonus-damage-per-champion",
+          "label": "Bonus Damage Per Champion",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 35,
+            "to": 85
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Diana/Moonfall",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Diana/Moonfall",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007593,
+      "icon": "DianaR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Diana.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "what": "Warwick ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Warwick",
+      "slot": "P",
+      "abilityName": "Eternal Hunger",
+      "instanceType": "on-hit",
+      "damageType": "magic",
+      "maxRank": 1,
+      "components": [
+        {
+          "id": "bonus-magic-damage",
+          "label": "Bonus Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "byLevel",
+            "from": 6,
+            "to": 55,
+            "atLevels": [
+              1,
+              18
+            ],
+            "steps": 18
+          },
+          "ratios": [
+            {
+              "stat": "bonusAD",
+              "scaling": "linear",
+              "from": 15,
+              "to": 15
+            },
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Warwick/Eternal Hunger",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Warwick/Eternal%20Hunger",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4022413,
+      "icon": "WarwickP.png"
+    },
+    {
+      "champion": "Warwick",
+      "slot": "Q",
+      "abilityName": "Jaws of the Beast",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "explicit",
+            "perRank": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "ratios": [
+            {
+              "stat": "maxHP",
+              "owner": "target",
+              "scaling": "linear",
+              "from": 6,
+              "to": 10
+            },
+            {
+              "stat": "totalAD",
+              "scaling": "linear",
+              "from": 120,
+              "to": 120
+            },
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 100,
+              "to": 100
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Warwick/Jaws of the Beast",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Warwick/Jaws%20of%20the%20Beast",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007380,
+      "icon": "WarwickQ.png"
+    },
+    {
+      "champion": "Warwick",
+      "slot": "W",
+      "abilityName": "Blood Hunt",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 5,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Warwick/Blood Hunt",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Warwick/Blood%20Hunt",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3980738,
+      "icon": "WarwickW.png"
+    },
+    {
+      "champion": "Warwick",
+      "slot": "E",
+      "abilityName": "Primal Howl",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 5,
+      "components": [],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Warwick/Primal Howl",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Warwick/Primal%20Howl",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4047663,
+      "icon": "WarwickE.png"
+    },
+    {
+      "champion": "Warwick",
+      "slot": "R",
+      "abilityName": "Infinite Duress",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Warwick/Infinite Duress",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Warwick/Infinite%20Duress",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4015471,
+      "icon": "WarwickR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Warwick.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

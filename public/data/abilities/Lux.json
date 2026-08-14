@@ -1,12 +1,12 @@
 {
-  "what": "Lux ability entries, extracted for the vertical slice (src/ui/slice).",
+  "what": "Lux ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
   "provenance": {
     "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
     "patch": "16.16.1",
     "fetched": "2026-08-13",
-    "extractedOn": "2026-08-13",
-    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best; Q is the one entry an independent re-derivation has confirmed. The slice states each entry's status on screen and must never present these as settled.",
-    "regenerate": "re-run the full-roster batch, then re-extract the Lux entries"
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
   },
   "abilities": [
     {
@@ -193,7 +193,7 @@
     }
   ],
   "art": {
-    "note": "Data Dragon icon filenames, fetched once on 2026-08-13 from the champion detail file so the page does not depend on a live data call at render time. The images themselves are loaded from the Data Dragon CDN, which SPECIFICATION 15 permits.",
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
     "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Lux.json",
     "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
     "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",

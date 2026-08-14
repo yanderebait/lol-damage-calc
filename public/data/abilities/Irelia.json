@@ -1,0 +1,259 @@
+{
+  "what": "Irelia ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Irelia",
+      "slot": "P",
+      "abilityName": "Ionian Fervor",
+      "instanceType": "on-hit",
+      "damageType": "magic",
+      "maxRank": 1,
+      "components": [
+        {
+          "id": "bonus-magic-damage",
+          "label": "Bonus Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "byLevel",
+            "from": 10,
+            "to": 61,
+            "atLevels": [
+              1,
+              18
+            ],
+            "steps": 18
+          },
+          "ratios": [
+            {
+              "stat": "bonusAD",
+              "scaling": "linear",
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Irelia/Ionian Fervor",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Irelia/Ionian%20Fervor",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4045313,
+      "icon": "Irelia_Passive.png"
+    },
+    {
+      "champion": "Irelia",
+      "slot": "Q",
+      "abilityName": "Bladesurge",
+      "instanceType": "damaging-ability",
+      "damageType": "physical",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "physical-damage",
+          "label": "Physical Damage",
+          "damageType": "physical",
+          "base": {
+            "scaling": "linear",
+            "from": 5,
+            "to": 85
+          },
+          "ratios": [
+            {
+              "stat": "totalAD",
+              "scaling": "linear",
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Irelia/Bladesurge",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Irelia/Bladesurge",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4038353,
+      "icon": "IreliaQ.png"
+    },
+    {
+      "champion": "Irelia",
+      "slot": "W",
+      "abilityName": "Defiant Dance",
+      "instanceType": "damaging-ability",
+      "damageType": "physical",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "minimum-physical-damage",
+          "label": "Minimum Physical Damage",
+          "damageType": "physical",
+          "base": {
+            "scaling": "linear",
+            "from": 10,
+            "to": 50
+          },
+          "ratios": [
+            {
+              "stat": "totalAD",
+              "scaling": "linear",
+              "from": 40,
+              "to": 40
+            },
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "maximum-physical-damage",
+          "label": "Maximum Physical Damage",
+          "damageType": "physical",
+          "base": {
+            "scaling": "linear",
+            "from": 30,
+            "to": 150
+          },
+          "ratios": [
+            {
+              "stat": "totalAD",
+              "scaling": "linear",
+              "from": 120,
+              "to": 120
+            },
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 150,
+              "to": 150
+            }
+          ],
+          "relation": {
+            "kind": "alternativeTo",
+            "componentId": "minimum-physical-damage"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Irelia/Defiant Dance",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Irelia/Defiant%20Dance",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007605,
+      "icon": "IreliaW.png"
+    },
+    {
+      "champion": "Irelia",
+      "slot": "E",
+      "abilityName": "Flawless Duet",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 70,
+            "to": 230
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 100,
+              "to": 100
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Irelia/Flawless Duet",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Irelia/Flawless%20Duet",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4021834,
+      "icon": "IreliaE.png"
+    },
+    {
+      "champion": "Irelia",
+      "slot": "R",
+      "abilityName": "Vanguard's Edge",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 125,
+            "to": 275
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Irelia/Vanguard's Edge",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Irelia/Vanguard's%20Edge",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4044346,
+      "icon": "IreliaR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Irelia.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

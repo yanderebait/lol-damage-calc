@@ -1,0 +1,196 @@
+{
+  "what": "Veigar ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Veigar",
+      "slot": "P",
+      "abilityName": "Phenomenal Evil Power",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 1,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Veigar/Phenomenal Evil Power",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Veigar/Phenomenal%20Evil%20Power",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3932550,
+      "icon": "VeigarEntropy.png"
+    },
+    {
+      "champion": "Veigar",
+      "slot": "Q",
+      "abilityName": "Baleful Strike",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 80,
+            "to": 240
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 50,
+              "to": 70
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Veigar/Baleful Strike",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Veigar/Baleful%20Strike",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4050924,
+      "icon": "VeigarBalefulStrike.png"
+    },
+    {
+      "champion": "Veigar",
+      "slot": "W",
+      "abilityName": "Dark Matter",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 85,
+            "to": 305
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 70,
+              "to": 110
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Veigar/Dark Matter",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Veigar/Dark%20Matter",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3991312,
+      "icon": "VeigarDarkMatter.png"
+    },
+    {
+      "champion": "Veigar",
+      "slot": "E",
+      "abilityName": "Event Horizon",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 5,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Veigar/Event Horizon",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Veigar/Event%20Horizon",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4016714,
+      "icon": "VeigarEventHorizon.png"
+    },
+    {
+      "champion": "Veigar",
+      "slot": "R",
+      "abilityName": "Primordial Burst",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "minimum-magic-damage",
+          "label": "Minimum Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 175,
+            "to": 325
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 65,
+              "to": 75
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "maximum-magic-damage",
+          "label": "Maximum Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 350,
+            "to": 650
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 130,
+              "to": 150
+            }
+          ],
+          "relation": {
+            "kind": "alternativeTo",
+            "componentId": "minimum-magic-damage"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Veigar/Primordial Burst",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Veigar/Primordial%20Burst",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4004085,
+      "icon": "VeigarR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Veigar.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

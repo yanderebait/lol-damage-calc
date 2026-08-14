@@ -1,0 +1,227 @@
+{
+  "what": "Nami ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Nami",
+      "slot": "P",
+      "abilityName": "Surging Tides",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 1,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Nami/Surging Tides",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Nami/Surging%20Tides",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3985614,
+      "icon": "NamiPassive.png"
+    },
+    {
+      "champion": "Nami",
+      "slot": "Q",
+      "abilityName": "Aqua Prison",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 90,
+            "to": 310
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Nami/Aqua Prison",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Nami/Aqua%20Prison",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007696,
+      "icon": "NamiQ.png"
+    },
+    {
+      "champion": "Nami",
+      "slot": "W",
+      "abilityName": "Ebb and Flow",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 60,
+            "to": 200
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "minimum-damage",
+          "label": "Minimum Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 36,
+            "to": 120
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "explicit",
+              "perRank": [
+                30,
+                30,
+                30,
+                30,
+                30
+              ]
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Nami/Ebb and Flow",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Nami/Ebb%20and%20Flow",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007697,
+      "icon": "NamiW.png"
+    },
+    {
+      "champion": "Nami",
+      "slot": "E",
+      "abilityName": "Tidecaller's Blessing",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "bonus-magic-damage-per-hit",
+          "label": "Bonus Magic Damage Per Hit",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 20,
+            "to": 80
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          },
+          "hits": 3
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Nami/Tidecaller's Blessing",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Nami/Tidecaller's%20Blessing",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4042884,
+      "icon": "NamiE.png"
+    },
+    {
+      "champion": "Nami",
+      "slot": "R",
+      "abilityName": "Tidal Wave",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "explicit",
+            "perRank": [
+              150,
+              250,
+              350
+            ]
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Nami/Tidal Wave",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Nami/Tidal%20Wave",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3712330,
+      "icon": "NamiR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Nami.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

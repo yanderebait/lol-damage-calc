@@ -1,0 +1,180 @@
+{
+  "what": "Alistar ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Alistar",
+      "slot": "P",
+      "abilityName": "Triumphant Roar",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 1,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Alistar/Triumphant Roar",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Alistar/Triumphant%20Roar",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007561,
+      "icon": "Alistar_E.png"
+    },
+    {
+      "champion": "Alistar",
+      "slot": "Q",
+      "abilityName": "Pulverize",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 60,
+            "to": 220
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Alistar/Pulverize",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Alistar/Pulverize",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007562,
+      "icon": "Pulverize.png"
+    },
+    {
+      "champion": "Alistar",
+      "slot": "W",
+      "abilityName": "Headbutt",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 55,
+            "to": 275
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 100,
+              "to": 100
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Alistar/Headbutt",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Alistar/Headbutt",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4007563,
+      "icon": "Headbutt.png"
+    },
+    {
+      "champion": "Alistar",
+      "slot": "E",
+      "abilityName": "Trample",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage-per-tick",
+          "label": "Magic Damage Per Tick",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 8,
+            "to": 20
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "explicit",
+              "perRank": [
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          },
+          "hits": 10
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Alistar/Trample",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Alistar/Trample",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4038209,
+      "icon": "AlistarE.png"
+    },
+    {
+      "champion": "Alistar",
+      "slot": "R",
+      "abilityName": "Unbreakable Will",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 3,
+      "components": [],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Alistar/Unbreakable Will",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Alistar/Unbreakable%20Will",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3956937,
+      "icon": "FerociousHowl.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Alistar.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

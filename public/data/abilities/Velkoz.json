@@ -1,0 +1,216 @@
+{
+  "what": "Vel'Koz ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Vel'Koz",
+      "slot": "P",
+      "abilityName": "Organic Deconstruction",
+      "instanceType": "on-hit",
+      "damageType": "true",
+      "maxRank": 1,
+      "components": [
+        {
+          "id": "true-damage",
+          "label": "True Damage",
+          "damageType": "true",
+          "base": {
+            "scaling": "byLevel",
+            "from": 35,
+            "to": 180,
+            "atLevels": [
+              1,
+              18
+            ],
+            "steps": 18
+          },
+          "ratios": [],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Vel'Koz/Organic Deconstruction",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Vel'Koz/Organic%20Deconstruction",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3986690,
+      "icon": "VelKoz_Passive.png"
+    },
+    {
+      "champion": "Vel'Koz",
+      "slot": "Q",
+      "abilityName": "Plasma Fission",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 80,
+            "to": 240
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Vel'Koz/Plasma Fission",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Vel'Koz/Plasma%20Fission",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4008544,
+      "icon": "VelkozQ.png"
+    },
+    {
+      "champion": "Vel'Koz",
+      "slot": "W",
+      "abilityName": "Void Rift",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 30,
+            "to": 110
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 45,
+            "to": 165
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Vel'Koz/Void Rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Vel'Koz/Void%20Rift",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4008545,
+      "icon": "VelkozW.png"
+    },
+    {
+      "champion": "Vel'Koz",
+      "slot": "E",
+      "abilityName": "Tectonic Disruption",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 70,
+            "to": 190
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Vel'Koz/Tectonic Disruption",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Vel'Koz/Tectonic%20Disruption",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3952590,
+      "icon": "VelkozE.png"
+    },
+    {
+      "champion": "Vel'Koz",
+      "slot": "R",
+      "abilityName": "Life Form Disintegration Ray",
+      "instanceType": "damaging-ability",
+      "maxRank": 3,
+      "components": [],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Vel'Koz/Life Form Disintegration Ray",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Vel'Koz/Life%20Form%20Disintegration%20Ray",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4012050,
+      "icon": "VelkozR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Velkoz.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

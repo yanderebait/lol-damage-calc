@@ -1,0 +1,229 @@
+{
+  "what": "Seraphine ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Seraphine",
+      "slot": "P",
+      "abilityName": "Stage Presence",
+      "instanceType": "on-hit",
+      "damageType": "magic",
+      "maxRank": 1,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "byLevel",
+            "from": 4,
+            "to": 25,
+            "atLevels": [
+              1,
+              18
+            ],
+            "steps": 18
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Seraphine/Stage Presence",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Seraphine/Stage%20Presence",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4019648,
+      "icon": "Seraphine_Passive.png"
+    },
+    {
+      "champion": "Seraphine",
+      "slot": "Q",
+      "abilityName": "High Note",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 60,
+            "to": 160
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "maximum-enhanced-damage",
+          "label": "Maximum Enhanced Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 105,
+            "to": 280
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "explicit",
+              "perRank": [
+                70,
+                70,
+                70,
+                70,
+                70
+              ]
+            }
+          ],
+          "relation": {
+            "kind": "alternativeTo",
+            "componentId": "magic-damage"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Seraphine/High Note",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Seraphine/High%20Note",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4042889,
+      "icon": "SeraphineQ.png"
+    },
+    {
+      "champion": "Seraphine",
+      "slot": "W",
+      "abilityName": "Surround Sound",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 5,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Seraphine/Surround Sound",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Seraphine/Surround%20Sound",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3990364,
+      "icon": "SeraphineW.png"
+    },
+    {
+      "champion": "Seraphine",
+      "slot": "E",
+      "abilityName": "Beat Drop",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 70,
+            "to": 190
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Seraphine/Beat Drop",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Seraphine/Beat%20Drop",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3990139,
+      "icon": "SeraphineE.png"
+    },
+    {
+      "champion": "Seraphine",
+      "slot": "R",
+      "abilityName": "Encore",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 150,
+            "to": 250
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Seraphine/Encore",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Seraphine/Encore",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4008035,
+      "icon": "SeraphineR.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Seraphine.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}

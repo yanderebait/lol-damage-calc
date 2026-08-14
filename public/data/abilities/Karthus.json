@@ -1,0 +1,224 @@
+{
+  "what": "Karthus ability entries, joined from the harvester's full-roster batch with Data Dragon icon filenames.",
+  "provenance": {
+    "source": "build/proposed-curated/abilities/batch-01.json, produced by scripts/extract/run-batch.ts",
+    "patch": "16.16.1",
+    "fetched": "2026-08-13",
+    "extractedOn": "2026-08-14",
+    "warning": "THESE ARE HARVESTER DRAFTS, NOT THE CURATED FILE. /curated/ holds no ability entries yet. Every figure here is derived at best, and each entry states its own verification status — the interface shows that status on screen and must never present these as settled. An entry marked incomplete contributes NO damage (SPECIFICATION §8).",
+    "regenerate": "node --experimental-strip-types scripts/build-ability-files.ts"
+  },
+  "abilities": [
+    {
+      "champion": "Karthus",
+      "slot": "P",
+      "abilityName": "Death Defied",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 1,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Karthus/Death Defied",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Karthus/Death%20Defied",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3985387,
+      "icon": "Karthus_Passive.png"
+    },
+    {
+      "champion": "Karthus",
+      "slot": "Q",
+      "abilityName": "Lay Waste",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 40,
+            "to": 116
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        },
+        {
+          "id": "isolated-enhanced-damage",
+          "label": "Isolated Enhanced Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 80,
+            "to": 232
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "explicit",
+              "perRank": [
+                70,
+                70,
+                70,
+                70,
+                70
+              ]
+            }
+          ],
+          "relation": {
+            "kind": "alternativeTo",
+            "componentId": "magic-damage"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Karthus/Lay Waste",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Karthus/Lay%20Waste",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4011136,
+      "icon": "KarthusLayWasteA1.png"
+    },
+    {
+      "champion": "Karthus",
+      "slot": "W",
+      "abilityName": "Wall of Pain",
+      "instanceType": "non-damaging-ability",
+      "maxRank": 5,
+      "components": [],
+      "verification": "no-damage",
+      "provenance": {
+        "source": "Template:Data Karthus/Wall of Pain",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Karthus/Wall%20of%20Pain",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 3990033,
+      "icon": "KarthusWallOfPain.png"
+    },
+    {
+      "champion": "Karthus",
+      "slot": "E",
+      "abilityName": "Defile",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 5,
+      "components": [
+        {
+          "id": "magic-damage-per-tick",
+          "label": "Magic Damage Per Tick",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 7.5,
+            "to": 27.5
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          },
+          "hits": 1
+        },
+        {
+          "id": "damage-per-second",
+          "label": "Damage Per Second",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 30,
+            "to": 110
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          },
+          "hits": 1
+        }
+      ],
+      "verification": "incomplete",
+      "provenance": {
+        "source": "Template:Data Karthus/Defile",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Karthus/Defile",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4006733,
+      "icon": "KarthusDefile.png"
+    },
+    {
+      "champion": "Karthus",
+      "slot": "R",
+      "abilityName": "Requiem",
+      "instanceType": "damaging-ability",
+      "damageType": "magic",
+      "maxRank": 3,
+      "components": [
+        {
+          "id": "magic-damage",
+          "label": "Magic Damage",
+          "damageType": "magic",
+          "base": {
+            "scaling": "linear",
+            "from": 200,
+            "to": 500
+          },
+          "ratios": [
+            {
+              "stat": "AP",
+              "scaling": "linear",
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "relation": {
+            "kind": "adds"
+          }
+        }
+      ],
+      "verification": "derived",
+      "provenance": {
+        "source": "Template:Data Karthus/Requiem",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template:Data_Karthus/Requiem",
+        "patch": "16.16.1",
+        "fetched": "2026-08-13"
+      },
+      "sourceRevision": 4015394,
+      "icon": "KarthusFallenOne.png"
+    }
+  ],
+  "art": {
+    "note": "Data Dragon icon filenames, fetched from the champion detail file so the page does not depend on a live data call at render time. The images themselves load from the Data Dragon CDN, which SPECIFICATION §15 permits.",
+    "source": "https://ddragon.leagueoflegends.com/cdn/16.16.1/data/en_US/champion/Karthus.json",
+    "spellIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell",
+    "passiveIconBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive",
+    "portraitBase": "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion"
+  }
+}
