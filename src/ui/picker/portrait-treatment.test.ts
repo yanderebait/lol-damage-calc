@@ -19,7 +19,7 @@
 // ═══ MEASURED ON THE LIVE PAGE, 2026-08-16 — THE DRIFT IS STILL OPEN ═══
 //
 // CLAUDE.md says to check the commit log before acting on any sentence in this project's documents
-// that says something is missing. `src/ui/art/art.css` has not been touched since `604fada`, and
+// that says something is missing. `src/ui/art/art.css` has not been touched since `132adf9`, and
 // the rendered values were read back from a real Chrome on `/calculator/` at a 1440px viewport with
 // the attacker picker open — 116 portraits, two distinct treatments:
 //

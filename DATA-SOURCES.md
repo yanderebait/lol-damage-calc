@@ -4520,7 +4520,7 @@ component under `src/ui/` — every `.tsx` reachable from `src/main.tsx`, which 
 session; they were created by the item-pool collapse and the state-column change, so the honest
 comparison is stated twice:
 
-- **At session start (commit `e6f8800`): 7 interaction-only surfaces, of which 1 was reached by a
+- **At session start (commit `ae5cea3`): 7 interaction-only surfaces, of which 1 was reached by a
   sweep and 6 were not.** Two of those six — the item announcement and the odometer roll — were
   reached by no test at all.
 - **Now: 10 interaction-only surfaces, of which 3 are reached by a sweep and 7 are not.** The same
@@ -5441,9 +5441,9 @@ engine session refuse 53 damage rows over the coefficient-shape paragraph.
 | claim | said | actually |
 |---|---|---|
 | CLAUDE.md's interface headline | burndown 309px BELOW the fold | fixed 2026-08-14 — 350px ABOVE it |
-| CLAUDE.md §44 | the URL drift is open, "a wire-format decision, raised not made" | closed 2026-08-14 in `c6a6754`; `KNOWN_DRIFT` empty since |
-| DESIGN-AUDIT §2 | three SPECIFICATION requirements absent | built in `1e3ba36`, about a MINUTE after the audit was written |
-| DESIGN-AUDIT §6.5 | 579px of horizontal overflow | fixed in `fdb482d`; does not reproduce |
+| CLAUDE.md §44 | the URL drift is open, "a wire-format decision, raised not made" | closed 2026-08-14 in `c4eb7ec`; `KNOWN_DRIFT` empty since |
+| DESIGN-AUDIT §2 | three SPECIFICATION requirements absent | built in `67963ec`, about a MINUTE after the audit was written |
+| DESIGN-AUDIT §6.5 | 579px of horizontal overflow | fixed in `72a3faa`; does not reproduce |
 
 **The rule now in CLAUDE.md: before acting on any sentence in these documents that says something
 is missing, absent, open or undecided, check the commit log.** A briefing is a measurement with a

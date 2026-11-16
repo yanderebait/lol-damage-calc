@@ -180,7 +180,7 @@ const PAGES: PageLength[] = [
     screens: 1.62,
     budget: 1.62,
     measured:
-      'Lead, 2026-08-16, dev server. Rescued from commit 18f08e9, which stated 1.44 screens in its ' +
+      'Lead, 2026-08-16, dev server. Rescued from commit e613500, which stated 1.44 screens in its ' +
       'message and in no file; re-measured rather than re-typed, and it had drifted to 1.62. No ' +
       'horizontal overflow, measured with clientWidth (1425 against 1425).',
   },

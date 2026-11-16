@@ -10,7 +10,7 @@
 // just enormous, and no test in this project could tell.
 //
 // It was found on 2026-08-16 by an audit of commit messages for measurements that never reached a
-// file. Commit `18f08e9` claimed the landing page ships "6.2 kB of JavaScript against the
+// file. Commit `e613500` claimed the landing page ships "6.2 kB of JavaScript against the
 // calculator's 83.9 kB" and recorded it nowhere. **Re-measured for this file, both figures had
 // moved and one of them had moved a long way** — which is the argument for the check in one line.
 //

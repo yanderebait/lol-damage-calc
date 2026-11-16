@@ -136,7 +136,7 @@ re-deriving it.**
 **THE HEADLINE HAS MOVED, AND THIS PARAGRAPH WAS STALE UNTIL 2026-08-15.** It said the
 configuration row occupied the whole first screen and the burndown — the signature element —
 began 309px below the fold, on a page 3.4 screens tall. That was true when audited and was fixed
-on 2026-08-14 by commits `658d61c` and `a09cd0c`, re-measured in DESIGN-AUDIT §6.1: the
+on 2026-08-14 by commits `dbe9d2d` and `f89f8c8`, re-measured in DESIGN-AUDIT §6.1: the
 configuration row fell 921px → 413px, the page 3,793px → 3,286px, and **the burndown's top edge
 moved from 309px BELOW the fold to 350px ABOVE it**, with the first 235px of the chart itself
 above it too. The first screen now holds both champions, the combo, the running total, the
@@ -155,7 +155,7 @@ damage.
 
 The three SPECIFICATION requirements the audit recorded as absent — the Riot disclaimer and the
 scope disclaimer (§15), and the report-a-wrong-number control (§8) — **are all present and were
-built in commit `1e3ba36`, about a minute after the audit was written.** Confirmed on the live page
+built in commit `67963ec`, about a minute after the audit was written.** Confirmed on the live page
 2026-08-15. The audit's §2 table said "No" to all three until then; it now carries both the audited
 and the current column.
 
@@ -491,7 +491,7 @@ places the figure appears.
 
 **THAT DRIFT IS CLOSED, AND THIS PARAGRAPH SAID OTHERWISE UNTIL 2026-08-15.** It read *"is pinned
 in `KNOWN_DRIFT`; closing it is a wire-format decision, raised not made"*, which stopped being true
-on 2026-08-14 in commit `c6a6754` — version 2 of the link format carries hit counts additively in a
+on 2026-08-14 in commit `c4eb7ec` — version 2 of the link format carries hit counts additively in a
 fifth positional slot, no version 3 was needed, and `KNOWN_DRIFT` has been EMPTY since. The stale
 sentence cost real work: it was copied verbatim into a `src/url/` brief on 2026-08-15, sending an
 agent to make a decision that had already been made. **This is the second time a stale paragraph in
@@ -516,7 +516,7 @@ was wrong in its arithmetic while right in its conclusion; the correction is in 
 **The coefficient shape is IN the contract and live — corrected 2026-08-13.** This paragraph used
 to say `Ratio` "cannot express it" and that the change was "waiting on a decision. Do not add the
 shape without one." That was true when written and stopped being true two commits later, in
-`202708d` ("give ratios a multiplier"), and nobody updated it. The stale text cost real work: an
+`d89feb9` ("give ratios a multiplier"), and nobody updated it. The stale text cost real work: an
 engine session refused 53 damage rows on the strength of it, and the lead repeated it in a brief.
 
 What is actually true: 32 abilities deal a percentage of a health pool whose percentage is itself

@@ -1,7 +1,7 @@
 # DESIGN-AUDIT.md — the built interface against DESIGN.md
 
 **Audited 2026-08-14.** Measured on the live page at a 1440×1100 viewport, default scenario
-(Lux vs Garen, level 6, no items), served by `npm run dev` from commit `21c3b11`.
+(Lux vs Garen, level 6, no items), served by `npm run dev` from commit `6b842d6`.
 
 **Why this file exists.** The interface is a working prototype wearing the tokens; it is not yet
 "Bench Test". Everything below was measured rather than judged, so a later session can act on it
@@ -255,7 +255,7 @@ scenario.
 
 The excluded-mechanics panel (§11) **is** present.
 
-**ALL THREE LANDED IN COMMIT `1e3ba36` AND THIS TABLE READ "No / No / No" UNTIL 2026-08-15.** They
+**ALL THREE LANDED IN COMMIT `67963ec` AND THIS TABLE READ "No / No / No" UNTIL 2026-08-15.** They
 were built roughly one minute after this file was written — the audit timestamps 20:21 and the shell
 20:22 — so the table was stale almost immediately and nothing re-checked it. Both disclaimer strings
 now match SPECIFICATION §15 character for character, verified against the live page rather than the
@@ -382,7 +382,7 @@ buys the least, and requires reversing a written argument to get it.
 ## 4. Proposed order of work
 
 1. ~~**Layout and hierarchy.** The fold problem, the spacing grade (§4), table density.~~
-   **DONE 2026-08-14** — commits `658d61c` and `a09cd0c`. Re-measured in section 6.
+   **DONE 2026-08-14** — commits `dbe9d2d` and `f89f8c8`. Re-measured in section 6.
 2. **The tag decision** (Part 2). It changes chips, values and the composition bar together, so it
    is better done once, after the layout settles. **Option A adopted 2026-08-14** by the project
    owner, on the comprehension finding rather than on the cue being wrong.
@@ -416,7 +416,7 @@ buys the least, and requires reversing a written argument to get it.
    overturned, and it is void.
 4. ~~**Reserved containers and the missing requirements.** Ad slots, both disclaimers, the report
    control — all layout-affecting, so they should land before anything is called finished.~~
-   **THE THREE REQUIREMENTS ARE DONE** — commit `1e3ba36`, confirmed on the live page 2026-08-15;
+   **THE THREE REQUIREMENTS ARE DONE** — commit `67963ec`, confirmed on the live page 2026-08-15;
    see the corrected table in §2. **Ad slots remain**, and they are gated: PLAN.md §6 fixes that
    advertising cannot be switched on before the privacy and cookie policies exist.
 5. ~~**The mobile horizontal overflow** (section 6.5). A SPECIFICATION §10 violation, pre-existing,
@@ -425,7 +425,7 @@ buys the least, and requires reversing a written argument to get it.
    tracked was real. That combination is why this note is long.**
 
    - **The 579px does not reproduce.** The default scenario at 375px reads **0px** today, closed by
-     commit `fdb482d`. §6.5 named the breakdown table as the cause; that sentence is stale too.
+     commit `72a3faa`. §6.5 named the breakdown table as the cause; that sentence is stale too.
    - **The violation was still live, by a different mechanism, in denser states.** Measured at
      **702px at 320px, 647px at 375px** with ten combo instances and every disclosure open, and 12px
      with the instances alone. **A sweep of the page at rest read 0px** — which is why it survived.
@@ -435,7 +435,7 @@ buys the least, and requires reversing a written argument to get it.
      `.u-visually-hidden` span inside a scrolling table escaped its region and extended the
      document. 151 spans across 5 regions, the furthest reaching x = 1,042.4 in a 375px viewport;
      1,042.4 − 375 = 667.4, which was the overflow.
-   - **Fixed by one declaration** — `position: relative` on `.u-scroll-x`, commit `5fdd61e`.
+   - **Fixed by one declaration** — `position: relative` on `.u-scroll-x`, commit `9106a6a`.
      Verified live: 702 / 647 / 12 → **0 / 0 / 0**, with the six scroll regions scrolling by
      identical amounts either side, and zero absolutely positioned elements inside any region other
      than those spans.
@@ -477,7 +477,7 @@ buys the least, and requires reversing a written argument to get it.
 ## 6. The re-measurement, 2026-08-14
 
 Same viewport (1440×1100), same scenario (Lux vs Garen, level 6, no items), same method as
-everything above. Commits `658d61c` (layout and hierarchy) and `a09cd0c` (the item pool and the
+everything above. Commits `dbe9d2d` (layout and hierarchy) and `f89f8c8` (the item pool and the
 state column).
 
 ### 6.1 Region geometry — the headline figure moved
@@ -564,7 +564,7 @@ viewport can hold. Every other panel fits: the configuration and item panels eac
 minimum-content width of 282px, inside the 327px available.
 
 **This PREDATES the layout work and was measured against the untouched code to be certain** — the
-overflow is 579px both before and after commit `658d61c`. It is therefore out of scope for that
+overflow is 579px both before and after commit `dbe9d2d`. It is therefore out of scope for that
 pass and is recorded here rather than being left to be rediscovered.
 
 **It is nonetheless a spec violation, not a rough edge.** SPECIFICATION §10: *"The interface is

@@ -34,7 +34,7 @@
 //
 // ═══ THIS FILE IS THE RECORD, AND ON 2026-08-15 SIX MEASUREMENTS WENT SOMEWHERE ELSE ═══
 //
-// Commit `b323e9b` measured all six then-unmeasured controls in a real browser at 375px and 320px,
+// Commit `b25cd26` measured all six then-unmeasured controls in a real browser at 375px and 320px,
 // and stated its findings — including that the defence toggle is 22.5px on the block axis and
 // passes by spacing at 78.34px — **in its commit message and in no file.** `git log -S "78.34"`
 // finds no commit that ever added that figure to the tree.
@@ -147,7 +147,7 @@ const CONTROLS: Record<string, Pass> = {
       "TALLEST control on the shelf, because --lh-body-m gives it a line box the icon buttons' " +
       'line-height: 0 does not, and --space-2 pads it twice. NOTHING WAS GROWN; both variants ' +
       'now name --target-min on the base class so the arithmetic cannot quietly stop clearing it. ' +
-      'Independently reproduced to the pixel by two sessions four hours apart (b323e9b, then a ' +
+      'Independently reproduced to the pixel by two sessions four hours apart (b25cd26, then a ' +
       'measurement pass that did not read it) — which is the only reason this entry says REFUTED ' +
       'rather than "one person once said". '+
       "Confirmed 2026-08-16 as the click recipient: 3492/3589 grid points at 375px and 3588/3589 at 1440px. The 97 misses are the single final row of a 36.84px box — device-pixel rounding of a fractional height, and the count moves with the box's sub-pixel offset. A 24x24px square on its centre is 576/576.",
@@ -252,7 +252,7 @@ const CONTROLS: Record<string, Pass> = {
       'rune worn. It carries the --target-min floor from the start rather than having been found ' +
       'short later, which is why the block axis is exactly 24.00 and not the 20.84 its sibling ' +
       '.items__remove measured — THE PRIOR DID NOT HOLD HERE, and measuring is what showed that. ' +
-      'Commit b323e9b measured it the same day and reported the same pass by size; this is an ' +
+      'Commit b25cd26 measured it the same day and reported the same pass by size; this is an ' +
       'independent re-measurement and the two agree to the pixel.',
   },
   'config/defences.css .defences__control': {
@@ -263,7 +263,7 @@ const CONTROLS: Record<string, Pass> = {
       'largest panel. Nearest neighbouring target centre 99.24px, and 57.00px in the tightest ' +
       'case the stylesheet allows, measured with every detail block collapsed. ' +
       '═══ THIS ENTRY SAID "not present on the default scenario", AND THE FIGURE PUBLISHED FOR IT ' +
-      'BELONGED TO A DIFFERENT BOX. ═══ Commit b323e9b reported 22.5px on the block axis, failing ' +
+      'BELONGED TO A DIFFERENT BOX. ═══ Commit b25cd26 reported 22.5px on the block axis, failing ' +
       'by 1.5px and passing by spacing at 78.34px. 22.50px is the .defences__label TEXT BOX. ' +
       '.defences__control was a <div> measuring 293.00 x 30.50px that accepted no pointer ' +
       'anywhere: elementFromPoint returned the bare div at the gap, at the trailing padding and ' +

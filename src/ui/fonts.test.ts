@@ -26,7 +26,7 @@
 // that never reached a file found 21 across 6 commits; these were among the most valuable, because
 // the defect they describe is invisible to every test that exists.
 //
-// From commit `4d1c69f`, measured in a real browser:
+// From commit `2c9b1c4`, measured in a real browser:
 //
 //   Saira          86px  →  81.1px
 //   IBM Plex Sans  81.3px →  79.4px

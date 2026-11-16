@@ -57,7 +57,7 @@
 //
 // **DESIGN-AUDIT §6.5's OWN FIGURE — 579px at 375px on the DEFAULT scenario — DOES NOT REPRODUCE,
 // and that is a result rather than a failure to find it.** It was real when measured on 2026-08-14
-// and was closed by `fdb482d`, which confined the breakdown table's scroll to its own region. What
+// and was closed by `72a3faa`, which confined the breakdown table's scroll to its own region. What
 // the default scenario reads today is 0px. **The §10 violation the audit recorded is nonetheless
 // still live** — at 622–702px, by a different mechanism, in states the default scenario does not
 // reach. Item 5 is not done; the sentence naming the table as its cause is.
